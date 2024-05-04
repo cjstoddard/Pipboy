@@ -5,6 +5,7 @@
   Background = Color.Black
   Foreground = Color.Black
   Text = ("Pipboy Mk IV")
+  Icon = Picture["assets/vaultboy-icon.jpg"]
   Border = False
   { RADIO_Panel Panel
     MoveScaled(1,6,91.875,41.875)
@@ -176,7 +177,7 @@
       #MoveScaled(85,35)
     }
     { LCDTimeLabel LCDLabel
-      MoveScaled(71,1.25,20,5)
+      MoveScaled(70,1.25,20,5)
       Font = Font["-5"]
       Background = Color.Black
       Foreground = Color.Green
