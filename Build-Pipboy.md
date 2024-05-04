@@ -18,7 +18,7 @@ I am using the latest Raspberry Pi OS image, I just used the imager to burn the 
 
 Once you have burned the image to the SD card, and you boot the Paspberry Pi for the first time, update it to the latest version using "sudo apt update && sudo apt upgrade". I also installed Gambas with "sudo apt install gambas3\*". 
 
-Once I have finished the TOTO list, I will do a 1.0 release and you can just download an installable package. but until then you will need to download it using "git clone https://github.com/cjstoddard/Pipboy.git". Open Gambas, choose Open Project, and navigate to the Pipboy folder and click open. Click on Project, then Make Executable. This will build pipboy.gambas for you. You can now close Gambase and double click on pipboy.gambas to make sure it runs properly. If it does, you are ready to move on.
+Once I have finished the TOTO list, I will do a 1.0 release and you can just download an installable package. but until then you will need to download it using "git clone https://github.com/cjstoddard/Pipboy.git". Open Gambas, choose Open Project, and navigate to the Pipboy folder and click on Open. Click on Project, then Make Executable. This will build pipboy.gambas for you. You can now close Gambase and double click on pipboy.gambas to make sure it runs properly. If it does, you are ready to move on.
 
 To get the touchscreen working run the following commands and then shut it down;
 
