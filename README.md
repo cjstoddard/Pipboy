@@ -25,7 +25,7 @@ TODO:
 - Have the INV screen load inventory.txt file when it opens.
 - Check for an internet connection, if there is not on, have it display a map image.
 - Add functionality to the MP3 player
-- Add a clock on the STAT screen.
+- ~~ Add a clock on the STAT screen.
 
 Disclaimer: This software is provided "AS IS", without warranty of any kind, express or implied, including but not limited to warranties of merchantability, fitness for a paticular purpose and nonifringment. In no event shall the author or copyright holders be liable for any claim, damages or other liability, whether in an action of contract, tort or otherwise, arising from, out of or in connection with the software or the use or other dealings in the software.
 
