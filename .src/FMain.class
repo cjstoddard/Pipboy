@@ -89,10 +89,15 @@ Public Sub RADIO_Button_Click()
   RADIO_Panel.Show 
 
 End
+
+Public Sub Exit_Button_Click()
+
+ Me.Close
+
+End
 '----------
 
 ' Inventory buttons
-
 Public Sub OPEN_Button_Click()
 
   Dialog.Filter = ["*.txt", "Text Files"]
@@ -115,7 +120,6 @@ End
 '----------
 
 ' Media player buttons
-
 Public Sub MBack_Button_Click()
 
   RADIO_MediaView.Stop 
@@ -166,12 +170,6 @@ Public Sub MNext_Button_Click()
   MSong_TextBox.Text = SongTitle
   RADIO_MediaView.URL = Application.Path & "/music/" & MPlaylist_ListBox.Text 
   RADIO_MediaView.Play()
-
-End
-
-Public Sub Exit_Button_Click()
-
-  Quit 
 
 End
 '----------
