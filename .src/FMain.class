@@ -3,6 +3,7 @@
   Public SongCounter As Integer
   Public SongMaxCounter As Integer
   Public SongTitle As String
+  Private bTrenn As Boolean
 
 Public Sub Form_Open()
 
@@ -40,6 +41,12 @@ Public Sub Form_Open()
   MPlaylist_ListBox.Index = SongCounter
   SongTitle = MPlaylist_ListBox.Text
   MSong_TextBox.Text = SongTitle
+'----------
+
+' Setup Clock
+  LCDTimer.Delay = 1000
+  LCDTimer.Start
+  LCDTimer_Timer()
 '----------
 
 End
@@ -157,14 +164,15 @@ Public Sub MNext_Button_Click()
 
 End
 
-Public Sub MMute_Button_Click()
-
-
-
-End
-
 Public Sub Exit_Button_Click()
 
   Quit 
 
 End
+
+Public Sub LCDTimer_Timer()
+
+  bTrenn = Not bTrenn
+  LCDTimeLabel.Text = Format(Now, "hh" & If(bTrenn, ":", "") & "nn" & If(bTrenn, ":", "") & "ss")
+
+End  

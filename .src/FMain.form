@@ -87,7 +87,7 @@
       Picture = Picture.Load("assets/vaultboy.gif")
     }
     { TextBox1 TextBox
-      MoveScaled(39,1,12.5,3.75)
+      MoveScaled(39,0,12.5,3.75)
       Background = Color.Green
       Foreground = Color.Black
     }
@@ -161,8 +161,8 @@
       Alignment = Align.Center
     }
     { TextLabel1 TextLabel
-      MoveScaled(1,1,20,6)
-      Font = Font["+5"]
+      MoveScaled(1,0,20,6)
+      Font = Font["+7"]
       Background = Color.Black
       Foreground = Color.Green
       Text = ("STATUS")
@@ -171,6 +171,16 @@
     { TextBox4 TextBox
       MoveScaled(21,21,12.5,3.75)
       Background = Color.Green
+    }
+    { LCDTimer #Timer
+      #MoveScaled(85,35)
+    }
+    { LCDTimeLabel LCDLabel
+      MoveScaled(71,1.25,20,5)
+      Font = Font["-5"]
+      Background = Color.Black
+      Foreground = Color.Green
+      Alignment = Align.Center
     }
   }
   { STAT_Button Button
