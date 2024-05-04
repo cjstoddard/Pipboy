@@ -28,3 +28,9 @@ TODO:
 - Add a clock on the STAT screen.
 
 Disclaimer: This software is provided "AS IS", without warranty of any kind, express or implied, including but not limited to warranties of merchantability, fitness for a paticular purpose and nonifringment. In no event shall the author or copyright holders be liable for any claim, damages or other liability, whether in an action of contract, tort or otherwise, arising from, out of or in connection with the software or the use or other dealings in the software.
+
+Credit where credit is due:
+I shamelessly stole all the images for this project from https://github.com/ultrinnan/PipBoy.
+
+Cpyrights and Trademarks:
+Both Fallout and Pipboy copyrights and trademarks are ZeniMax Media Inc and Bethesda Games. This project was developed for fun as part of a hobby, no infringment of any copyrights or trademarks is intended.
