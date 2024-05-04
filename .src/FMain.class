@@ -1,0 +1,170 @@
+' Gambas class file
+
+  Public SongCounter As Integer
+  Public SongMaxCounter As Integer
+  Public SongTitle As String
+
+Public Sub Form_Open()
+
+  STAT_Panel.Show
+  INV_Panel.Hide
+  DATA_Panel.Hide
+  RADIO_Panel.Hide
+  
+  Dim sFile As Stream
+  Dim sLine As String
+  sFile = Open Application.Path & "/pipboy.ini" For Input 
+  Line Input #sFile, sLine
+  Name_Text.Text = sLine
+  Line Input #sFile, sLine
+  Aim_TextBox.Text = sLine
+  Line Input #sFile, sLine
+  Sheild_TextBox.Text = sLine
+  Line Input #sFile, sLine
+  Voltage_TextBox.Text = sLine
+  Line Input #sFile, sLine
+  Nuclear_TextBox.Text = sLine
+  Close #sFile
+
+' Set MP3 Player
+  Dim Directory As String
+  Dim Files As String[]
+  Dim hfile As String
+  Directory = Application.Path & "/music"
+  Files = Dir(Directory, "*")
+  For Each hfile In Files
+    MPlaylist_ListBox.Add(hfile)
+  Next
+  SongCounter = 0
+  SongMaxCounter = MPlaylist_ListBox.Count
+  MPlaylist_ListBox.Index = SongCounter
+  SongTitle = MPlaylist_ListBox.Text
+  MSong_TextBox.Text = SongTitle
+'----------
+
+End
+
+Public Sub STAT_Button_Click()
+
+  STAT_Panel.Show
+  INV_Panel.Hide
+  DATA_Panel.Hide
+  RADIO_Panel.Hide
+
+End
+
+Public Sub INV_Button_Click()
+
+  STAT_Panel.Hide
+  INV_Panel.Show
+  DATA_Panel.Hide
+  RADIO_Panel.Hide
+
+End
+
+Public Sub DATA_Button_Click()
+
+  STAT_Panel.Hide
+  INV_Panel.Hide
+  DATA_Panel.Show
+  RADIO_Panel.Hide
+
+End
+
+Public Sub RADIO_Button_Click()
+
+  STAT_Panel.Hide
+  INV_Panel.Hide
+  DATA_Panel.Hide
+  RADIO_Panel.Show 
+
+End
+
+' Inventory buttons
+
+Public Sub OPEN_Button_Click()
+
+  Dialog.Filter = ["*.txt", "Text Files"]
+  If Dialog.OpenFile() Then Return
+  INV_TextArea.Text = File.Load(Dialog.Path)
+Catch
+  Message.Info(Error.Text)
+
+End
+
+Public Sub SAVE_Button_Click()
+
+  Dialog.Filter = ["*.txt", "Text Files"]
+  If Dialog.SaveFile() Then Return
+  File.Save(Dialog.Path, INV_TextArea.Text)
+Catch
+  Message.Info(Error.Text)
+
+End
+
+' Media player buttons
+
+Public Sub MBack_Button_Click()
+
+  RADIO_MediaView.Stop 
+  If SongCounter = 0 Then 
+    SongCounter = SongMaxCounter - 1
+    Else 
+      SongCounter = SongCounter - 1
+  Endif
+  
+  MPlaylist_ListBox.Index = SongCounter
+  SongTitle = MPlaylist_ListBox.Text
+  MSong_TextBox.Text = SongTitle
+  RADIO_MediaView.URL = Application.Path & "/music/" & MPlaylist_ListBox.Text 
+  RADIO_MediaView.Play()
+
+End
+
+Public Sub MPlay_Button_Click()
+
+  MPlaylist_ListBox.Index = SongCounter
+  RADIO_MediaView.URL = Application.Path & "/music/" & MPlaylist_ListBox.Text 
+  RADIO_MediaView.Play()
+  
+End
+
+Public Sub MStop_Button_Click()
+
+  RADIO_MediaView.Stop 
+
+End
+
+Public Sub MPause_Button_Click()
+
+  RADIO_MediaView.Pause
+
+End
+
+Public Sub MNext_Button_Click()
+
+  RADIO_MediaView.Stop 
+  SongCounter = SongCounter + 1
+  If SongCounter > SongMaxCounter Then 
+    SongCounter = 0
+  Endif
+  
+  MPlaylist_ListBox.Index = SongCounter
+  SongTitle = MPlaylist_ListBox.Text
+  MSong_TextBox.Text = SongTitle
+  RADIO_MediaView.URL = Application.Path & "/music/" & MPlaylist_ListBox.Text 
+  RADIO_MediaView.Play()
+
+End
+
+Public Sub MMute_Button_Click()
+
+
+
+End
+
+Public Sub Exit_Button_Click()
+
+  Quit 
+
+End
