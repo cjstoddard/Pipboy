@@ -3,7 +3,7 @@
   Public SongCounter As Integer
   Public SongMaxCounter As Integer
   Public SongTitle As String
-  Private bTrenn As Boolean
+  Private bTime As Boolean
 
 Public Sub Form_Open()
 
@@ -11,7 +11,8 @@ Public Sub Form_Open()
   INV_Panel.Hide
   DATA_Panel.Hide
   RADIO_Panel.Hide
-  
+
+' Read pipboy.ini file  
   Dim sFile As Stream
   Dim sLine As String
   sFile = Open Application.Path & "/pipboy.ini" For Input 
@@ -26,8 +27,9 @@ Public Sub Form_Open()
   Line Input #sFile, sLine
   Nuclear_TextBox.Text = sLine
   Close #sFile
+'----------
 
-' Set MP3 Player
+' Setup MP3 Player
   Dim Directory As String
   Dim Files As String[]
   Dim hfile As String
@@ -51,6 +53,7 @@ Public Sub Form_Open()
 
 End
 
+' Top Tab Buttons
 Public Sub STAT_Button_Click()
 
   STAT_Panel.Show
@@ -86,6 +89,7 @@ Public Sub RADIO_Button_Click()
   RADIO_Panel.Show 
 
 End
+'----------
 
 ' Inventory buttons
 
@@ -108,6 +112,7 @@ Catch
   Message.Info(Error.Text)
 
 End
+'----------
 
 ' Media player buttons
 
@@ -169,10 +174,12 @@ Public Sub Exit_Button_Click()
   Quit 
 
 End
+'----------
 
+' Handles updating the clock
 Public Sub LCDTimer_Timer()
 
-  bTrenn = Not bTrenn
-  LCDTimeLabel.Text = Format(Now, "hh" & If(bTrenn, ":", "") & "nn" & If(bTrenn, ":", "") & "ss")
+  bTime = Not bTime
+  LCDTimeLabel.Text = Format(Now, "hh" & If(bTime, ":", "") & "nn" & If(bTime, ":", "") & "ss")
 
 End  
