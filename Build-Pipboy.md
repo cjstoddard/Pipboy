@@ -6,7 +6,7 @@ This is a work in progress, as I move along I will update this document with wha
 
 Parts list:
 
-These are the parts I am currently using. I opted for a 4" screen and the software is optimized with 88x480 screen resolution in mind, if you use a smaller screen, the code will need to be changed.
+These are the parts I am currently using. I opted for a 4" screen and the software is optimized with 800x480 screen resolution in mind, if you use a smaller screen, the code will need to be changed.
 
 - Raspberry Pi 4
 - Miuzei Raspberry Pi 4 Touchscreen with Case Fan
