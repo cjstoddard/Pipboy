@@ -33,4 +33,4 @@ Credit where credit is due:
 I shamelessly stole all the images for this project from https://github.com/ultrinnan/PipBoy.
 
 Cpyrights and Trademarks:
-Both Fallout and Pipboy copyrights and trademarks are ZeniMax Media Inc and Bethesda Games. This project was developed for fun as part of a hobby, no infringment of any copyrights or trademarks is intended.
+Both Fallout and Pipboy copyrights and trademarks belong to ZeniMax Media Inc and Bethesda Games. This project was developed for fun as part of a hobby, no infringment of any copyrights or trademarks is intended.
