@@ -17,7 +17,7 @@ Software:
 
 I am using the latest Raspberry Pi OS image, I just used the imager to burn the image to an SD card. Before installing the touchscreen, perform the following on a regular monitor, it is just easier.
 
-Once you have burned the image to the SD card, and you boot the Paspberry Pi for the first time, update it to the latest version using "sudo apt update && sudo apt upgrade". I also installed Gambas with "sudo apt install gambas3\*". 
+Once you have burned the image to the SD card, and you boot the Paspberry Pi for the first time, update it to the latest version using "sudo apt update && sudo apt upgrade". I also installed Gambas with "sudo apt install gambas3\*". I also install a virtual keyboard to make working with the touchscreen easier, "sudo apt install matchbox-keyboard at-spi2-core".
 
 Once I have finished the TOTO list, I will do a 1.0 release and you can just download an installable package. but until then you will need to download it using "git clone https://github.com/cjstoddard/Pipboy.git". Open Gambas, choose Open Project, and navigate to the Pipboy folder and click on Open. Click on Project, then Make Executable. This will build pipboy.gambas for you. You can now close Gambase and double click on pipboy.gambas to make sure it runs properly. If it does, you are ready to move on.
 
