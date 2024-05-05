@@ -30,7 +30,7 @@ gbc3 -agv > Pipboy.log
 gba3
 cd
 ```
-You can now close Gambase and double click on Pipboy.gambas to make sure it runs properly. If it does, you are ready to move on.
+Now close your terminal and open the file manager, open the Pipboy folder and double click on Pipboy.gambas to make sure it runs properly. If it does, you are ready to move on.
 
 To get the touchscreen working run the following commands and then shut it down;
 
