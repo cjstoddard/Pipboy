@@ -8,11 +8,11 @@ This screen does not do anything useful. It does fill some of the text boxes fro
 
 INV Screen:
 
-This is a very basic text editor with just open and save buttons.
+This is a very basic text editor with just open and save buttons. On start up the program loads inventory.txt, you can edit this file either with Pipboy or another text editor, just don't forget to save the file.
 
 DATA Screen:
 
-This is a web browser control, it loads Google Maps and requires the device to have an internet connection.
+This is a web browser control, it loads Google Maps and requires the device to have an internet connection. If Pipboy does not detect an internet connection, it will display a Fallout style map instead
 
 RADIO screen:
 
@@ -22,8 +22,6 @@ TODO:
 
 - Straighten alignment of controls.
 - Add GPIO library so I can add rotary knobs and perhaps a GPS or temp/humidity/pressure sensor.
-- Have the INV screen load inventory.txt file when it opens.
-- Check for an internet connection, if there is not on, have it display a map image.
 - Add functionality to the MP3 player
 
 Disclaimer: This software is provided "AS IS", without warranty of any kind, express or implied, including but not limited to warranties of merchantability, fitness for a paticular purpose and nonifringment. In no event shall the author or copyright holders be liable for any claim, damages or other liability, whether in an action of contract, tort or otherwise, arising from, out of or in connection with the software or the use or other dealings in the software.
