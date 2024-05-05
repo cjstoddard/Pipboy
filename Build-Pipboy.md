@@ -17,7 +17,7 @@ Software:
 
 I am using the latest Raspberry Pi OS image, I just used the imager to burn the image to an SD card. Before installing the touchscreen, perform the following on a regular monitor, it is just easier.
 
-Once you have burned the image to the SD card, and you boot the Raspberry Pi for the first time, update it to the latest version using "sudo apt update && sudo apt upgrade". I also installed Gambas with "sudo apt install gambas3*". I also install a virtual keyboard to make working with the touchscreen easier along with git, which is used to get this software, "sudo apt install matchbox-keyboard at-spi2-core git".
+Once you have burned the image to the SD card, and you boot the Raspberry Pi for the first time, update it to the latest version using "sudo apt update && sudo apt upgrade". I also install a virtual keyboard to make working with the touchscreen easier, git which is used to get this software and gambas for compiling the code, "sudo apt install matchbox-keyboard at-spi2-core git gambas3*".
 
 Once I have finished the TOTO list, I will do a 1.0 release and you can just download an installable package. but until then you will need to follow these instructions. Open a terminal and type in the following commands;
 
