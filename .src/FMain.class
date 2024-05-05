@@ -5,6 +5,7 @@ Public SongMaxCounter As Integer
 Public SongTitle As String
 Private bTime As Boolean
 
+
 Public Sub Form_Open()
 
   STAT_Panel.Show
@@ -29,6 +30,16 @@ Public Sub Form_Open()
   Close #sFile
 '----------
 
+' Read inventory.txt file  
+  sFile = Open Application.Path & "/inventory.txt" For Input 
+
+  While Not Eof(sFile)
+    Line Input #sFile, sLine
+    INV_TextArea.Text = INV_TextArea.Text & Chr(10) & sLine
+  Wend   
+  Close #sFile
+'----------
+
 ' Setup MP3 Player
   Dim Directory As String
   Dim Files As String[]
@@ -49,6 +60,12 @@ Public Sub Form_Open()
   LCDTimer.Delay = 1000
   LCDTimer.Start
   LCDTimer_Timer()
+'----------
+
+' Check For internet connection
+  PingTimer.Delay = 30000
+  PingTimer.Start
+  PingTimer_Timer()
 '----------
 
 End
@@ -92,7 +109,7 @@ End
 
 Public Sub Exit_Button_Click()
 
- Me.Close
+ Quit 
 
 End
 '----------
@@ -181,3 +198,20 @@ Public Sub LCDTimer_Timer()
   LCDTimeLabel.Text = Format(Now, "hh" & If(bTime, ":", "") & "nn" & If(bTime, ":", "") & "ss")
 
 End  
+
+' Checks for an internet connection
+
+Public Sub PingTimer_Timer()
+  
+  Dim strResult As String
+
+  Exec ["ping", "-c 1", "-w 1", "8.8.8.8"] To strResult
+  If InStr(strResult, "64 bytes from") > 0 Then
+    DATA_WebView1.Url = "https://maps.google.com"
+    DATA_WebView1.Refresh
+  Else
+    DATA_WebView1.URL = "file://" & Application.Path & "/map.html "
+    DATA_WebView1.Refresh
+  Endif
+
+End
