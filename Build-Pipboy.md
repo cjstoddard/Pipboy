@@ -49,3 +49,14 @@ For more information see http://www.lcdwiki.com/4inch_HDMI_Display-C
 
 Once the final command is finished, it will ask you to reboot, answer no and then shut the Raspberry Pi down. You can install the touchscreen and mount the Raspberry Pi in the case. You can now boot it up and the screen should work. You can open the Home folder, go into the Pipboy folder and execute Pipboy.gambas using the touchscreen. To make it easier you can place a link to pipboy.sh on the desktop or add it to startup so it comes up when you boot up the Raspberry Pi.
 
+Updating the code:
+
+As a side note, once you have had everything up and running for a while and you need to update to the latest version, open a terminal and type in the following commands;
+
+```
+cd Pipboy
+git pull
+gbc3 -agv > Pipboy.log
+gba3
+cd
+```
