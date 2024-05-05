@@ -1,9 +1,9 @@
 ' Gambas class file
 
-  Public SongCounter As Integer
-  Public SongMaxCounter As Integer
-  Public SongTitle As String
-  Private bTime As Boolean
+Public SongCounter As Integer
+Public SongMaxCounter As Integer
+Public SongTitle As String
+Private bTime As Boolean
 
 Public Sub Form_Open()
 
