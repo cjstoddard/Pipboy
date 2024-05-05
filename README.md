@@ -1,6 +1,6 @@
 #### Yet another Pipboy program
 
-My wife decided she wanted a Pipyboy for cosplay. I could have just bought one, there are several availblem but what fun is that. This project is no where near done, but the basics are here. This program is written in Gambas 3, and while I have tried to add some funtionality to it, the program is by no means a functional personal assistant.
+My wife decided she wanted a Pipyboy for cosplay. I could have just bought one, there are several availblem but what fun is that. This project is no where near done, but the basics are here. This program is written in Gambas 3, and while I have tried to add some funtionality to it, the program is by no means a functional personal assistant. Read the Build-Pipboy.md document, this will get you started on installing the software and getting your Raspberry Pi setup.
 
 STAT Screen:
 
