@@ -17,9 +17,20 @@ Software:
 
 I am using the latest Raspberry Pi OS image, I just used the imager to burn the image to an SD card. Before installing the touchscreen, perform the following on a regular monitor, it is just easier.
 
-Once you have burned the image to the SD card, and you boot the Raspberry Pi for the first time, update it to the latest version using "sudo apt update && sudo apt upgrade". I also installed Gambas with "sudo apt install gambas3*". I also install a virtual keyboard to make working with the touchscreen easier, "sudo apt install matchbox-keyboard at-spi2-core".
+Once you have burned the image to the SD card, and you boot the Raspberry Pi for the first time, update it to the latest version using "sudo apt update && sudo apt upgrade". I also installed Gambas with "sudo apt install gambas3*". I also install a virtual keyboard to make working with the touchscreen easier along with git, which is used to get this software, "sudo apt install matchbox-keyboard at-spi2-core git".
 
-Once I have finished the TOTO list, I will do a 1.0 release and you can just download an installable package. but until then you will need to download it using "git clone https://github.com/cjstoddard/Pipboy.git". Open Gambas, choose Open Project, and navigate to the Pipboy folder and click on Open. Click on Project, then Make Executable. This will build Pipboy.gambas for you. You can now close Gambase and double click on Pipboy.gambas to make sure it runs properly. If it does, you are ready to move on.
+Once I have finished the TOTO list, I will do a 1.0 release and you can just download an installable package. but until then you will need to follow these instructions. Open a terminal and type in the following commands;
+
+```
+git clone https://github.com/cjstoddard/Pipboy.git
+cd Pipboy
+gbc3 --all
+gbc3 -ag
+gbc3 -agv > Pipboy.log
+gba3
+cd
+```
+You can now close Gambase and double click on Pipboy.gambas to make sure it runs properly. If it does, you are ready to move on.
 
 To get the touchscreen working run the following commands and then shut it down;
 
@@ -32,4 +43,5 @@ sudo ./MPI4008-show
 
 For more information see http://www.lcdwiki.com/4inch_HDMI_Display-C
 
-At this point you can install the touchscreen and mount the Raspberry Pi in the case. You can now boot it up and the screen should work. You can open the Home folder, go into the Pipboy folder and execute Pipboy.gambas using the touchscreen. To make it easier you can place a link to pipboy.sh on the desktop or add it to startup so it comes up when you boot up the Raspberry Pi. 
+At this point you can install the touchscreen and mount the Raspberry Pi in the case. You can now boot it up and the screen should work. You can open the Home folder, go into the Pipboy folder and execute Pipboy.gambas using the touchscreen. To make it easier you can place a link to pipboy.sh on the desktop or add it to startup so it comes up when you boot up the Raspberry Pi.
+
