@@ -7,53 +7,6 @@
   Text = ("Pipboy Mk IV")
   Icon = Picture["assets/vaultboy-icon.jpg"]
   Border = False
-  { RADIO_Panel Panel
-    MoveScaled(1,6,91.875,41.875)
-    Background = Color.Black
-    { RADIO_MediaView MediaView
-      MoveScaled(2,2,87.5,6.25)
-    }
-    { MBack_Button Button
-      MoveScaled(4,27,12.5,12.5)
-      Background = Color.Black
-      Picture = Picture["assets/icons/back.png"]
-    }
-    { MPlay_Button Button
-      MoveScaled(22,27,12.5,12.5)
-      Background = Color.Black
-      Picture = Picture["assets/icons/play-button.png"]
-    }
-    { MStop_Button Button
-      MoveScaled(40,27,12.5,12.5)
-      Background = Color.Black
-      Picture = Picture["assets/icons/stop.png"]
-    }
-    { MPause_Button Button
-      MoveScaled(57,27,12.5,12.5)
-      Background = Color.Black
-      Picture = Picture["assets/icons/pause.png"]
-    }
-    { MNext_Button Button
-      MoveScaled(74,27,12.5,12.5)
-      Background = Color.Black
-      Picture = Picture["assets/icons/next.png"]
-    }
-    { MSong_TextBox TextBox
-      MoveScaled(43,22,44,4)
-      Background = Color.Green
-      Foreground = Color.Black
-    }
-    { MPlaylist_ListBox ListBox
-      MoveScaled(43,10,44,11)
-      Background = Color.Green
-      Foreground = Color.Black
-      ScrollBar = Scroll.Both
-    }
-    { PictureBox2 PictureBox
-      MoveScaled(3,10,28,16)
-      Picture = Picture.Load("assets/radiowaves.gif")
-    }
-  }
   { DATA_Panel Panel
     MoveScaled(1,6,91.875,41.875)
     Indent = True
@@ -182,6 +135,54 @@
       Background = Color.Black
       Foreground = Color.Green
       Alignment = Align.Center
+    }
+  }
+  { RADIO_Panel Panel
+    MoveScaled(1,6,91.875,41.875)
+    Background = Color.Black
+    { RADIO_MediaView MediaView
+      MoveScaled(12,3,7,6)
+      ShowControl = False
+    }
+    { MBack_Button Button
+      MoveScaled(4,27,12.5,12.5)
+      Background = Color.Black
+      Picture = Picture["assets/icons/back.png"]
+    }
+    { MPlay_Button Button
+      MoveScaled(22,27,12.5,12.5)
+      Background = Color.Black
+      Picture = Picture["assets/icons/play-button.png"]
+    }
+    { MStop_Button Button
+      MoveScaled(40,27,12.5,12.5)
+      Background = Color.Black
+      Picture = Picture["assets/icons/stop.png"]
+    }
+    { MPause_Button Button
+      MoveScaled(57,27,12.5,12.5)
+      Background = Color.Black
+      Picture = Picture["assets/icons/pause.png"]
+    }
+    { MNext_Button Button
+      MoveScaled(74,27,12.5,12.5)
+      Background = Color.Black
+      Picture = Picture["assets/icons/next.png"]
+    }
+    { MSong_TextBox TextBox
+      MoveScaled(33,21.875,53.75,4)
+      Background = Color.Green
+      Foreground = Color.Black
+    }
+    { MPlaylist_ListBox ListBox
+      MoveScaled(33,1,53.75,20)
+      Background = Color.Green
+      Foreground = Color.Black
+      ScrollBar = Scroll.Both
+    }
+    { PictureBox2 PictureBox
+      MoveScaled(5,1,25,25)
+      Picture = Picture.Load("assets/old-world-radio.jpg")
     }
   }
   { STAT_Button Button
