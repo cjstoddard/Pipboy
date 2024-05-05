@@ -8,36 +8,40 @@ Private bTime As Boolean
 
 Public Sub Form_Open()
 
+  Dim sFile As Stream
+  Dim sLine As String
+    
   STAT_Panel.Show
   INV_Panel.Hide
   DATA_Panel.Hide
   RADIO_Panel.Hide
 
 ' Read pipboy.ini file  
-  Dim sFile As Stream
-  Dim sLine As String
-  sFile = Open Application.Path & "/pipboy.ini" For Input 
-  Line Input #sFile, sLine
-  Name_Text.Text = sLine
-  Line Input #sFile, sLine
-  Aim_TextBox.Text = sLine
-  Line Input #sFile, sLine
-  Sheild_TextBox.Text = sLine
-  Line Input #sFile, sLine
-  Voltage_TextBox.Text = sLine
-  Line Input #sFile, sLine
-  Nuclear_TextBox.Text = sLine
-  Close #sFile
+  If Exist(Application.Path & "/pipboy.ini") Then 
+    sFile = Open Application.Path & "/pipboy.ini" For Input 
+    Line Input #sFile, sLine
+    Name_Text.Text = sLine
+    Line Input #sFile, sLine
+    Aim_TextBox.Text = sLine
+    Line Input #sFile, sLine
+    Sheild_TextBox.Text = sLine
+    Line Input #sFile, sLine
+    Voltage_TextBox.Text = sLine
+    Line Input #sFile, sLine
+    Nuclear_TextBox.Text = sLine
+   Close #sFile
+ Endif 
 '----------
 
-' Read inventory.txt file  
-  sFile = Open Application.Path & "/inventory.txt" For Input 
-
-  While Not Eof(sFile)
-    Line Input #sFile, sLine
-    INV_TextArea.Text = INV_TextArea.Text & Chr(10) & sLine
-  Wend   
-  Close #sFile
+' Read inventory.txt file
+  If Exist(Application.Path & "/inventory.txt") Then   
+    sFile = Open Application.Path & "/inventory.txt" For Input 
+    While Not Eof(sFile)
+      Line Input #sFile, sLine
+      INV_TextArea.Text = INV_TextArea.Text & Chr(10) & sLine
+    Wend   
+    Close #sFile
+  Endif 
 '----------
 
 ' Setup MP3 Player
