@@ -23,7 +23,7 @@ Once you have burned the image to the SD card, and you boot the Raspberry Pi for
 sudo apt install onboard at-spi2-core git gambas3*
 ```
 
-Once I have finished the TOTO list, I will do a 1.0 release and you can just download an installable package. but until then you will need to follow these instructions. Open a terminal and type in the following commands;
+Once I have finished the TOTO list, I will do a 1.0 release and you can just download an installable package. Until then you will need to follow these instructions. Open a terminal and type in the following commands;
 
 ```
 git clone https://github.com/cjstoddard/Pipboy.git
