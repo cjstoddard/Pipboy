@@ -24,8 +24,6 @@ Once I have finished the TOTO list, I will do a 1.0 release and you can just dow
 ```
 git clone https://github.com/cjstoddard/Pipboy.git
 cd Pipboy
-gbc3 --all
-gbc3 -ag
 gbc3 -agv > Pipboy.log
 gba3
 cd
