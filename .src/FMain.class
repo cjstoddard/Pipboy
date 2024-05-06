@@ -10,6 +10,9 @@ Public Sub Form_Open()
 
   Dim sFile As Stream
   Dim sLine As String
+  Dim Directory As String
+  Dim Files As String[]
+  Dim hfile As String
     
   STAT_Panel.Show
   INV_Panel.Hide
@@ -45,9 +48,6 @@ Public Sub Form_Open()
 '----------
 
 ' Setup MP3 Player
-  Dim Directory As String
-  Dim Files As String[]
-  Dim hfile As String
   Directory = Application.Path & "/music"
   Files = Dir(Directory, "*")
   For Each hfile In Files
@@ -60,6 +60,7 @@ Public Sub Form_Open()
   MSong_TextBox.Text = SongTitle
 '----------
 
+Finally  
 ' Setup Clock
   LCDTimer.Delay = 1000
   LCDTimer.Start
@@ -72,6 +73,8 @@ Public Sub Form_Open()
   PingTimer_Timer()
 '----------
 
+Catch 
+  
 End
 
 ' Top Tab Buttons
