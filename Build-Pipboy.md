@@ -23,7 +23,7 @@ Once you have burned the image to the SD card, and you boot the Raspberry Pi for
 
 ```
 sudo apt update && sudo apt upgrade
-sudo apt install amiga-fonts onboard at-spi2-core git gambas3*
+sudo apt install fonts-amiga onboard at-spi2-core git gambas3*
 ```
 
 I will do a 1.0 release in the near future so you can just download an installable package. Until then you will need to follow these instructions. Type the following commands into the terminal;
