@@ -48,6 +48,7 @@ Public Sub Form_Open()
 '----------
 
 ' Setup MP3 Player
+  'Directory = User.Home & "/Music"
   Directory = Application.Path & "/music"
   Files = Dir(Directory, "*")
   For Each hfile In Files
@@ -157,6 +158,7 @@ Public Sub MBack_Button_Click()
   SongTitle = MPlaylist_ListBox.Text
   MSong_TextBox.Text = SongTitle
   RADIO_MediaView.URL = Application.Path & "/music/" & MPlaylist_ListBox.Text 
+  'RADIO_MediaView.URL = User.Home & "/Music/" & MPlaylist_ListBox.Text 
   RADIO_MediaView.Play()
 
 End
@@ -165,6 +167,7 @@ Public Sub MPlay_Button_Click()
 
   MPlaylist_ListBox.Index = SongCounter
   RADIO_MediaView.URL = Application.Path & "/music/" & MPlaylist_ListBox.Text 
+  'RADIO_MediaView.URL = User.Home & "/Music/" & MPlaylist_ListBox.Text 
   RADIO_MediaView.Play()
   
 End
@@ -192,9 +195,10 @@ Public Sub MNext_Button_Click()
   MPlaylist_ListBox.Index = SongCounter
   SongTitle = MPlaylist_ListBox.Text
   MSong_TextBox.Text = SongTitle
+  'RADIO_MediaView.URL = User.Home & "/Music/" & MPlaylist_ListBox.Text 
   RADIO_MediaView.URL = Application.Path & "/music/" & MPlaylist_ListBox.Text 
   RADIO_MediaView.Play()
-
+ 
 End
 '----------
 
