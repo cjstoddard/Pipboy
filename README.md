@@ -18,6 +18,8 @@ RADIO screen:
 
 This is a basic MP3 player, there is a music folder in the program folder, place any music you want in that folder.
 
+If you are not interested in the source code and just want to download the binary, install it and move on to putting the hardware together, to the right, click on releases and download pipboy-1.0.zip. Extract the file, inside the pipboy folder you will find an install.sh program. Run that and it will install all the dependacies, place the program itself into $HOME/bin/pipboy and place a nice icon on your desktop to run the program. Otherwise read the Build-Pipboy.md file for more information.
+
 Disclaimer: This software is provided "AS IS", without warranty of any kind, express or implied, including but not limited to warranties of merchantability, fitness for a paticular purpose and nonifringment. In no event shall the author or copyright holders be liable for any claim, damages or other liability, whether in an action of contract, tort or otherwise, arising from, out of or in connection with the software or the use or other dealings in the software.
 
 Credit where credit is due:
