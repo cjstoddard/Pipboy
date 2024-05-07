@@ -37,11 +37,10 @@ Next, to get the code and compile it, type the following commands into the termi
 ```
 git clone https://github.com/cjstoddard/Pipboy.git
 cd Pipboy
-gbc3 -agv > Pipboy.log
-gba3
-cd
+chmod +x make.sh
+./make.sh
 ```
-Now open the file manager, open the Pipboy folder and double click on Pipboy.gambas to make sure it runs properly. If it does, you are ready to move on.
+You should now have a Pipboy icon on your desktop, double click on Pipboy.gambas to make sure it runs properly. If it does, you are ready to move on.
 
 Hardware:
 
@@ -65,8 +64,6 @@ As a side note, once you have had everything up and running for a while and you 
 
 ```
 cd Pipboy
-git pull
-gbc3 -agv > Pipboy.log
-gba3
+./update.sh
 cd
 ```
