@@ -67,3 +67,11 @@ cd Pipboy
 ./update.sh
 cd
 ```
+
+If you have modified the code yourself don't run update.sh, instead once you have built the executable, just copy Pipboy.gambas to the $HOME/bin/pipboy/ folder.
+
+```
+cd Pipboy
+cp Pipboy.gambas $HOME/bin/pipboy/
+cd
+```
