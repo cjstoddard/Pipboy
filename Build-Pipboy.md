@@ -15,18 +15,23 @@ These are the parts I am currently using. I opted for a 4" screen and the softwa
 
 Software:
 
-Please read this whole document before proceeding.
-
-I am using the latest Raspberry Pi OS image, I just used the imager to burn the image to an SD card. Before installing the touchscreen, perform the following on a regular monitor, it is just easier.
-
-Once you have burned the image to the SD card, and you boot the Raspberry Pi for the first time, update it to the latest version and install amiga-fonts, the Onboard virtual keyboard to make working with the touchscreen easier, Git which is used to download software and Gambas for compiling the code. Open a terminal and type in the following commands;
+I am using the latest Raspberry Pi OS image, I just used the imager to burn the image to an SD card. Before installing the touchscreen, perform the following on a regular monitor, it is just easier. Once you have burned the image to the SD card, and you boot the Raspberry Pi for the first time, update it to the latest version. Open a terminal and run the following command;
 
 ```
 sudo apt update && sudo apt upgrade
+```
+
+First of all, if you are not interested in the source code and just want to download the binary, install it and move on to putting the hardware together, go to the main page, on the right, click on releases and download pipboy-1.0.zip. Extract the file, inside the pipboy folder you will find an install.sh program. Run that and it will install all the dependacies, place the program itself into $HOME/bin/pipboy and place a nice icon on your desktop to run the program. You can now skip down to the hardware section.
+
+If you are interested in the source code and making modifications, continue reading. Please read this whole document before proceeding.
+
+It is now time to install the dependencies, specifically, amiga-fonts, the Onboard virtual keyboard to make working with the touchscreen easier, Git which is used to download software and Gambas for compiling the code. In the terminal and type in the following commands;
+
+```
 sudo apt install fonts-amiga onboard at-spi2-core git gambas3*
 ```
 
-I will do a 1.0 release in the near future so you can just download an installable package. Until then you will need to follow these instructions. Type the following commands into the terminal;
+Next, to get the code and compile it, type the following commands into the terminal;
 
 ```
 git clone https://github.com/cjstoddard/Pipboy.git
@@ -36,6 +41,8 @@ gba3
 cd
 ```
 Now open the file manager, open the Pipboy folder and double click on Pipboy.gambas to make sure it runs properly. If it does, you are ready to move on.
+
+Hardware:
 
 To get the touchscreen working run the following commands in the terminal;
 
