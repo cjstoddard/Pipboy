@@ -2,6 +2,8 @@
 
 My wife decided she wanted a Pipyboy for cosplay. I could have just bought one, there are several availble, but what fun is that. This project is no where near done, but the basics are here. This program is written in Gambas 3, and while I have tried to add some funtionality to it, the program is by no means a functional personal assistant. Read the Build-Pipboy.md document, this will get you started on installing the software and getting your Raspberry Pi setup.
 
+Please keep in mind, this is meant as nothing more than a cosplay prop with a couple of mildly interesting functions. It is not meant to be a fully functioning anything, nor is it meant to be an accurate reproduction of the Pipboy interface. My goal here was to be literally "Good enough", perfect never was and never will be my goal.
+
 STAT Screen:
 
 This screen does not do anything useful. It does fill some of the text boxes from the pipboy.ini file. The first line of the ini file I use for the text box directly under the vaultboy image, I put the name I want use. The lines after that fill in the Aim, Shield, Voltage and Nuclear boxes. Pipboy.ini can be edited with any text editor.
