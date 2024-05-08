@@ -16,8 +16,8 @@
 
 5. Why when I run this on a Raspbery Pi on a monitor, the Data tab is scrambled?
 
-  I do not know. It has something to do with the webview component, but otherwise, I have no clue.
+   I do not know. It has something to do with the webview component, but otherwise, I have no clue.
 
 6. When will you have a Pipboy arm band shell for this setup?
 
-  I am working it. This is the toughest part for me, so it is going to take a while. Sorry.
+   I am working it. This is the toughest part for me, so it is going to take a while. Sorry.
