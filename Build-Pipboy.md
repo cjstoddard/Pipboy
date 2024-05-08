@@ -13,6 +13,7 @@ These are the parts I am currently using. I opted for a 4" screen and the softwa
 - Miuzei Raspberry Pi 4 Touchscreen with Case Fan.
 - USB C Battery Pack for the Raspberry Pi to make it portable.
 - A small speaker, either with a 3.5mm plug or Bluetooth.
+- Optionally, mini bluetooth keyboard/touchpad.
 
 Software:
 
