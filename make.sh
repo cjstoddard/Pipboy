@@ -7,6 +7,9 @@ gba3
 
 # Makes the desktop file
 
+echo "[Desktop Entry]" > pipboy.desktop
+echo "Type=Application" >> pipboy.desktop
+echo "Name=Pipboy" >> pipboy.desktop
 echo "Icon=$HOME/bin/pipboy/assets/vaultboy-icon.jpg" >> pipboy.desktop
 echo "Path=$HOME/bin/pipboy" >> pipboy.desktop
 echo "Exec=$HOME/bin/pipboy/pipboy.sh" >> pipboy.desktop
