@@ -82,28 +82,21 @@ Music:
 If you are looking for some Fallout appropriate music for you Pipboy, these 3 Youtube videos will give you almost 5 hours of music.
 
 Fallout 3 Galaxy News Radio All Songs
+
 https://www.youtube.com/watch?v=LxM7soNJC1A
 
 Fallout 76 - Appalachia Radio - Complete Tracklist
+
 https://www.youtube.com/watch?v=FHF6q1mBiFs
 
 Fallout 4 Radio Songs Diamond City Station Full + Track List
+
 https://www.youtube.com/watch?v=Yy9La6YXNqI
 
-The audio of these videos can be downloaded as opus files with the following command;
-
-```
-yt-dlp -x --audio-quality 0 URL
-```
-
-The opus files can then be converted to mp3's;
-
-```
-ffmpeg -i Filename.opus -ab 320k -map_metadata 0:s:a:0 -id3v2_version 3 Filename.mp3
-```
-
-Obviously this will require yt-dlp and ffmpeg
+The audio of these videos can be downloaded as opus files and then coverted to mp3's with the following commands;
 
 ```
 sudo apt install yt-dlp ffmpeg
+yt-dlp -x --audio-quality 0 URL
+ffmpeg -i Filename.opus -ab 320k -map_metadata 0:s:a:0 -id3v2_version 3 Filename.mp3
 ```
