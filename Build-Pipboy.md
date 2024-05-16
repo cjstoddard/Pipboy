@@ -79,7 +79,7 @@ cd
 
 Music:
 
-If you are looking for some Fallout appropriate music for you Pipboy, these 3 Youtube videos will give you almost 5 hours of music.
+If you are looking for some Fallout appropriate music for your Pipboy, these 3 Youtube videos will give you almost 5 hours of music.
 
 Fallout 3 Galaxy News Radio All Songs
 
