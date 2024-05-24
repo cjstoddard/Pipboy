@@ -79,7 +79,7 @@ cd
 
 Music:
 
-If you are looking for some Fallout appropriate music for your Pipboy, these 3 Youtube videos will give you almost 5 hours of music.
+If you are looking for some Fallout appropriate music for your Pipboy, these 4 Youtube videos will give you almost 10 hours of music.
 
 Fallout 3 Galaxy News Radio All Songs
 
@@ -92,6 +92,10 @@ https://www.youtube.com/watch?v=FHF6q1mBiFs
 Fallout 4 Radio Songs Diamond City Station Full + Track List
 
 https://www.youtube.com/watch?v=Yy9La6YXNqI
+
+Wastelanders Radio - Every Fallout (Main) Radio Tracklist
+
+https://www.youtube.com/watch?v=yNOj5sD570I
 
 The audio of these videos can be downloaded as opus files and then coverted to mp3's with the following commands;
 
